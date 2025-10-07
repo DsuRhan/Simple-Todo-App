@@ -5,6 +5,12 @@ Features include dark/light theme toggle, priority levels, deadlines, and smooth
 
 ---
 
+## Deployment Link
+Check it out: `https://simple-todo-app-plum.vercel.app/`
+
+
+---
+
 ## 🧰 Features
 
 - Add new todos with text, optional deadline, and priority (**low**, **medium**, **high**)
@@ -74,7 +80,7 @@ Transitions and animations use Tailwind’s built-in utilities for smooth fade a
 
 ## ✔️ Current Features & To-Do
 
-# ✅ Completed
+### ✅ Completed
 
 Core CRUD functionality (add, toggle, delete)
 
@@ -88,7 +94,7 @@ Filter system (All / Active / Completed)
 
 Responsive layout
 
-# ⚠️ Potential Improvements
+### ⚠️ Potential Improvements
 
 Edit existing todos
 
@@ -116,7 +122,7 @@ Toggle the app’s theme between dark and light using the top-right button.
 
 Use filters to view only active or completed tasks.
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 React (Hooks & Function Components)
 
