@@ -1,73 +1,137 @@
-# React + TypeScript + Vite
+# Simple Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, responsive Todo application built with **React**, **TypeScript**, and **Tailwind CSS** (via Vite).  
+Features include dark/light theme toggle, priority levels, deadlines, and smooth animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Features
 
-## React Compiler
+- Add new todos with text, optional deadline, and priority (**low**, **medium**, **high**)
+- Mark todos as completed or uncompleted
+- Delete todos with a fade-out animation
+- Filter todos by **All**, **Active**, or **Completed**
+- Toggle between **dark mode** and **light mode**
+- Warm color tones for light mode
+- Responsive layout (mobile & desktop friendly)
+- Persistent storage using **localStorage**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<pre>
+src/
+├── components/
+│ ├── TodoForm.tsx
+│ ├── TodoList.tsx
+│ ├── TodoItem.tsx
+│ ├── TodoFilter.tsx
+│ └── ThemeToggle.tsx
+├── types.ts
+├── App.tsx
+├── index.tsx
+└── index.css
+</pre>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Explanation:**
+- **components/** → UI logic for form, list, items, filter, and theme toggle
+- **types.ts** → Shared TypeScript type definitions
+- **App.tsx** → Root component managing global state and theme
+- **index.css** → Tailwind base styles and resets
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14+ recommended)
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/DsuRhan/Simple-Todo-App.git
+cd Simple-Todo-App
+npm install
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🎨 Styling & Theme Logic
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Styling is handled with Tailwind CSS utility classes.
+
+Dark/light mode is controlled using a React useState hook (dark) and toggling a CSS class on <html>.
+
+Components receive the dark state via props or global state to update colors dynamically.
+
+Transitions and animations use Tailwind’s built-in utilities for smooth fade and scale effects.
+
+---
+
+## ✔️ Current Features & To-Do
+
+# ✅ Completed
+
+Core CRUD functionality (add, toggle, delete)
+
+Dark/light theme toggle
+
+Priority & deadline input
+
+Animated transitions
+
+Filter system (All / Active / Completed)
+
+Responsive layout
+
+# ⚠️ Potential Improvements
+
+Edit existing todos
+
+Sort by deadline or priority
+
+Add delete confirmation
+
+Save selected theme preference
+
+Accessibility improvements (keyboard & ARIA)
+
+Add testing (unit / integration)
+
+---
+
+## 📜 Example Usage
+
+Add a new task with a title, deadline, and priority.
+
+Mark it as completed by clicking the checkbox.
+
+Delete it — it fades out smoothly.
+
+Toggle the app’s theme between dark and light using the top-right button.
+
+Use filters to view only active or completed tasks.
+
+##🛠️ Tech Stack
+
+React (Hooks & Function Components)
+
+TypeScript
+
+Tailwind CSS (via Vite)
+
+Vite (development and build tool)
+
+---
+
+## 👤 Author
+
+DsuRhan
+Created for learning and demonstration purposes.
+Feel free to fork, modify, or contribute to improve the app.
+
+-“A simple app built efficiently — just enough to keep you productive.”
