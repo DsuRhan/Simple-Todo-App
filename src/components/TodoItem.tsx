@@ -17,10 +17,13 @@ export default function TodoItem({ todo, onToggle, onDelete, dark }: Props) {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDelete = () => {
-    setDeleting(true);
-    setTimeout(() => onDelete(todo.id), 300);
-  };
+const handleDelete = () => {
+  const confirmDelete = window.confirm("Are you sure?");
+  if (!confirmDelete) return;
+  setDeleting(true);
+  setTimeout(() => onDelete(todo.id), 300);
+};
+
 
   const overdue =
     todo.deadline && new Date(todo.deadline).getTime() < Date.now() && !todo.completed;
