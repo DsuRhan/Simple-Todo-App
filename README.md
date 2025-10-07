@@ -6,7 +6,7 @@ Features include dark/light theme toggle, priority levels, deadlines, and smooth
 ---
 
 ## Deployment Link
-Check it out: `https://simple-todo-app-plum.vercel.app/`
+Check it out: [simple-todo-app-plum.vercel.app](https://simple-todo-app-plum.vercel.app/)<br>
 
 
 ---
