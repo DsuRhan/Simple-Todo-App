@@ -1,4 +1,3 @@
-import React from "react";
 import type { Filter } from "../types";
 
 interface Props {

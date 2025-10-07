@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Todo } from "../types";
 
 interface Props {

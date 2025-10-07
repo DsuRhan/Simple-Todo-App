@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Todo, Filter } from "./types";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
