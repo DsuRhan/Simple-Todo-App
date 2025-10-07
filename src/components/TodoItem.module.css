@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.itemEnter {
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: fadeIn 0.3s forwards;
+}
+
+.itemExit {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+}

@@ -1,0 +1,27 @@
+/* eslint-disable */
+/* stylelint-disable */
+@import 'tailwindcss';
+
+:root {
+  --color-bg-light: #fff7ed; /* amber-50 */
+  --color-bg-dark: #0f172a; /* slate-900 */
+  --color-text-light: #3b2f2f;
+  --color-text-dark: #e2e8f0;
+  --color-accent-light: #fbbf24; /* amber-400 */
+  --color-accent-dark: #6366f1; /* indigo-500 */
+}
+
+html.light {
+  background: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+html.dark {
+  background: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+html.light .btn-primary {
+  background-color: var(--color-accent-light);
+  color: #3b2f2f;
+}
